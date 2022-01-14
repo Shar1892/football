@@ -1,0 +1,90 @@
+.match {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  border: 5px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.match__tour-number {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.match__competitor-container {
+  padding: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.match__competitor-name {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 23px;
+  line-height: 26px;
+}
+
+.match__competitor-score {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.match__date {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 23px;
+  line-height: 26px;
+}
+
+.match__stadium {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 23px;
+  line-height: 26px;
+}

@@ -1,0 +1,58 @@
+.matchList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: solid 5px #ffffff;
+}
+
+.matchList__title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  line-height: 39px;
+}
+
+.matchList__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .matchList__container {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .matchList {
+    width: 1280px;
+  }
+
+  .matchList__container {
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 10px;
+  }
+}

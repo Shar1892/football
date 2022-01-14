@@ -1,0 +1,39 @@
+@import '../../SCSSConstants/mixins.scss';
+
+.matchList {
+	@include displayFlexView(column, flex-start, center);
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: solid 5px #ffffff;
+}
+
+.matchList__title {
+	margin: 0;
+	@include fontStyle(normal, #ffffff, 25px, 39px);
+}
+
+.matchList__container {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 20px;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.matchList__container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px 10px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.matchList {
+		width: 1280px;
+	}
+
+	.matchList__container {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px 10px;
+	}
+}

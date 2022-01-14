@@ -1,0 +1,42 @@
+@import '../../SCSSConstants/mixins.scss';
+
+.match {
+	@include displayFlexView(column, flex-start, center);
+	padding: 10px;
+	width: 100%;
+	height: 200px;
+	border-radius: 15px;
+	border: 5px solid #ffffff;
+	box-sizing: border-box;
+}
+
+.match__tour-number {
+	margin: 0;
+	@include fontStyle(normal, #ffffff, 25px, 29px);
+}
+
+.match__competitor-container {
+	padding: 5px;
+	width: 100%;
+	@include displayFlexView(row, space-between, center);
+}
+
+.match__competitor-name {
+	margin: 0;
+	@include fontStyle(normal, #ffffff, 23px, 26px);
+}
+
+.match__competitor-score {
+	margin: 0;
+	@include fontStyle(normal, #ffffff, 25px, 29px);
+}
+
+.match__date {
+	margin: 0;
+	@include fontStyle(normal, #ffffff, 23px, 26px);
+}
+
+.match__stadium {
+	margin: 0;
+	@include fontStyle(normal, #ffffff, 23px, 26px);
+}

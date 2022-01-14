@@ -1,0 +1,120 @@
+.popup__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: visibility 0.5s linear, opacity 0.5s linear;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+  opacity: 0;
+}
+
+.popup__overlay_visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.popup__tour-number {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.popup__competitor-container {
+  padding: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__competitor-name {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  line-height: 39px;
+}
+
+.popup__competitor-score {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.popup__date {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.popup__stadium {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+@media screen and (min-width: 768px) {
+  .popup {
+    width: 450px;
+  }
+}
