@@ -1,3 +1,6 @@
+С сервера полочаем данные по матчам, выводим список матчей, по клику на записть отрывается попап с данными по отдельному матчу.
+Верстка адаптирована под экраны устройств разных размеров
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
