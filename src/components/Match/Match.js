@@ -1,23 +1,10 @@
-import {useState, useEffect} from 'react';
-
 import './Match.css';
 import {createDate} from '../../utils/utils';
 
 const Match = ({match, openPopup}) => {
-	useEffect(() => {
-		let stadium = match.stadium;
-		console.log(match);
-	}, []);
-
 	const openMatchPopup = () => {
 		openPopup(match);
 	};
-
-	//const createDate = (date) => {
-	//	const dateArr = date.split('');
-	//	dateArr.length = 10;
-	//	return dateArr.join('');
-	//};
 
 	return (
 		<div className='match' onClick={openMatchPopup}>

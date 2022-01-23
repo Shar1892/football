@@ -1,8 +1,11 @@
-const BASE_URL =
-	'https://footballista.ru/api/seasons/5099/calendar_paginated?limit=10&offset=0';
+//const BASE_URL =
+//	'https://footballista.ru/api/seasons/5099/calendar_paginated?limit=15&offset=0';
 
-export const getMatchs = () => {
-	return fetch(`${BASE_URL}`, {
+const BASE_URL =
+	'https://footballista.ru/api/seasons/5099/calendar_paginated?limit=';
+
+export const getMatchs = (size) => {
+	return fetch(`${BASE_URL}${size}'&offset=0'`, {
 		method: 'GET',
 		headers: {
 			Accept: 'application/json',
