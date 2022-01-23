@@ -2,9 +2,6 @@ import './MatchPopup.css';
 import {createDate} from '../../utils/utils';
 
 const MatchPopup = ({match, isOpen, popupClose}) => {
-	//useEffect(() => {
-	//	console.log(match);
-	//}, []);
 	const handleClose = (evt) => {
 		if (evt.target === evt.currentTarget) {
 			popupClose();

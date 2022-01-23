@@ -11,16 +11,21 @@ function App() {
 	const [matchs, setMatchs] = useState([]);
 	const [selectedMatch, setSelectedMatch] = useState({});
 	const [isPopupOpen, setIsPopupOpen] = useState(false);
+	const [numberLoadedMatches, setNumberLoadedMatches] = useState(10);
 
 	const handlePopupOpen = (match) => {
 		setSelectedMatch(match);
 		setIsPopupOpen(true);
-		console.log(match);
+		setEventListeners();
 	};
 
 	const popupClose = () => {
 		setIsPopupOpen(false);
-		console.log('Close');
+		document.removeEventListener('keydown', handleEscClose);
+	};
+
+	const setEventListeners = () => {
+		document.addEventListener('keydown', handleEscClose);
 	};
 
 	const handleEscClose = (evt) => {
@@ -29,22 +34,31 @@ function App() {
 		}
 	};
 
-	useEffect(() => {
-		Api.getMatchs().then((matchList) => {
+	const handleShowMore = () => {
+		let newNumberLoadedMatches = numberLoadedMatches + 5;
+		setNumberLoadedMatches(newNumberLoadedMatches);
+		Api.getMatchs(newNumberLoadedMatches).then((matchList) => {
 			setMatchs(matchList.items);
-			//console.log(matchList);
-			//console.log(matchList.items);
+		});
+	};
+
+	useEffect(() => {
+		Api.getMatchs(numberLoadedMatches).then((matchList) => {
+			setMatchs(matchList.items);
 		});
 	}, []);
 
 	return (
-		<div className='App'>
+		<div className='app'>
 			<MatchList matchs={matchs} openPopup={handlePopupOpen} />
 			<MatchPopup
 				match={selectedMatch}
 				isOpen={isPopupOpen}
 				popupClose={popupClose}
 			/>
+			<button className='app__button' onClick={handleShowMore}>
+				More
+			</button>
 		</div>
 	);
 }

@@ -1,4 +1,4 @@
-.App {
+.app {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,4 +12,28 @@
   width: 100%;
   min-height: 100vh;
   background-color: #00a000;
+}
+
+.app__button {
+  min-height: 45px;
+  width: 200px;
+  margin: 20px auto;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.app__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
